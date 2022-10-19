@@ -6,6 +6,10 @@ lib/**/*.js
 typings/
 
 node_modules/
+build/
+.env
+
+
 
 yarn-error.log
 
