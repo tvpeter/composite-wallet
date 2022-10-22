@@ -4,6 +4,7 @@ import mongoose from 'mongoose'
 
 import { config } from './config/config'
 import Logging from './library/Logging';
+import userRoutes from './routes/User';
 
 const app = express();
 
@@ -45,6 +46,9 @@ const StartServer = () => {
 
         next();
     })
+
+    /**User routes */
+    app.use('/users', userRoutes);
 
     /**Health check */
     app.get('/ping', (req, res, next) => {
